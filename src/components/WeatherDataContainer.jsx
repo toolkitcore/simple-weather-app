@@ -1,5 +1,5 @@
 import useWeather from '../hooks/useWeather';
-import { formatWeatherData } from '../utils/weather';
+import { formatWeatherData, isSunny } from '../utils/weather';
 import { GoLocation } from 'react-icons/go';
 import { BsSun, BsCloudHaze2 } from 'react-icons/bs';
 
@@ -25,8 +25,12 @@ const WeatherDataContainer = ({ location, isCelsius }) => {
                 </div>
 
                 <div className='main-forecast-data'>
-                    <span className={ isCelsius ? 'celsius' : '' }>{ temp }</span>
-                    <span>{ description }</span>
+                    {
+                        isSunny(temp, isCelsius) ?
+                            <BsSun />
+                        :
+                            <BsCloudHaze2 />
+                    }
                     <span className={ isCelsius ? 'degrees celsius' : 'degrees' }>{ temp }</span>
                     <span className='description'>{ description }</span>
                 </div>

@@ -1,3 +1,8 @@
+export const isSunny = (temp, isCelsius) => {
+    const threshold = isCelsius ? 20 : 68;
+    return temp > threshold;
+}
+
 const formatDate = (timestamp, options) => {
     const date = new Date(timestamp * 1000);
     return new Intl.DateTimeFormat('en-us', options).format(date);
