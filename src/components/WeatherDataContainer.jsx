@@ -1,5 +1,7 @@
 import useWeather from '../hooks/useWeather';
 import { formatWeatherData } from '../utils/weather';
+import { GoLocation } from 'react-icons/go';
+import { BsSun, BsCloudHaze2 } from 'react-icons/bs';
 
 const WeatherDataContainer = ({ location, isCelsius }) => {
     const data = useWeather(location, isCelsius);
@@ -16,36 +18,39 @@ const WeatherDataContainer = ({ location, isCelsius }) => {
                 <div className='general-data'>
                     <h2>{ dayOfWeek }</h2>
                     <span className='date'>{ stringDate }</span>
-                    <span className='city'>{ data.city.name }</span>
+                    <span className='city'>
+                        <GoLocation />
+                        { data.city.name }
+                    </span>
                 </div>
 
                 <div className='main-forecast-data'>
                     <span className={ isCelsius ? 'celsius' : '' }>{ temp }</span>
                     <span>{ description }</span>
+                    <span className={ isCelsius ? 'degrees celsius' : 'degrees' }>{ temp }</span>
+                    <span className='description'>{ description }</span>
                 </div>
             </div>
 
             <div className='right-container'>
-                <div className='forecast-data'>
-                    <div>
-                        <strong>MIN TEMP</strong>
-                        <span>{ minTemp }</span>
-                    </div>
+                <div>
+                    <strong>MIN TEMP</strong>
+                    <span>{ minTemp }</span>
+                </div>
 
-                    <div>
-                        <strong>MAX TEMP</strong>
-                        <span>{ maxTemp }</span>
-                    </div>
+                <div>
+                    <strong>MAX TEMP</strong>
+                    <span>{ maxTemp }</span>
+                </div>
 
-                    <div>
-                        <strong>HUMIDITY</strong>
-                        <span>{ humidity }</span>
-                    </div>
+                <div>
+                    <strong>HUMIDITY</strong>
+                    <span>{ humidity }</span>
+                </div>
 
-                    <div>
-                        <strong>WIND</strong>
-                        <span>{ windSpeed }</span>
-                    </div>
+                <div>
+                    <strong>WIND</strong>
+                    <span>{ windSpeed }</span>
                 </div>
             </div>
         </div>

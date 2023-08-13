@@ -113,6 +113,106 @@ header form button {
 }
 
 .weather-data-container {
+  display: flex;
+  margin: auto;
+  color: #fff;
+}
+
+.left-container.loader {
   margin: auto;
 }
 
+.left-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  width: 21rem;
+  height: 30rem;
+  border-radius: 2rem;
+  background: linear-gradient(136deg, rgba(136, 235, 239, 0.6) 0%, rgba(83, 91, 230, 0.8) 100%), url('/src/assets/images/background.png');
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2),
+              0 2px 4px rgba(0, 0, 0, 0.1),
+              0 4px 8px rgba(0, 0, 0, 0.1);
+  background-size: cover;
+}
+
+.left-container .general-data {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.general-data h2 {
+  font-weight: 700;
+  font-size: 1.7rem; 
+}
+
+.general-data .date {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.general-data .city {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.main-forecast-data {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.main-forecast-data svg {
+  font-size: 3rem;
+}
+
+.main-forecast-data .degrees::after {
+  content: '°F';
+}
+
+.main-forecast-data .celsius::after {
+  content: '°C';
+}
+
+.main-forecast-data .degrees {
+  font-size: 3rem;
+}
+
+.main-forecast-data .description {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.weather-data-container .right-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: auto;
+  padding: 3rem;
+  width: 19em;
+  height: 26.5rem;
+  border-radius: 1.5625rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background: #222831;
+}
+
+.weather-data-container .right-container div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-container div strong {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.right-container div span {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
