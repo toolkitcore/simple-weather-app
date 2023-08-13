@@ -1,13 +1,19 @@
 import { useState } from 'react';
 import { useWeather } from '../context/WeatherProvider';
 import SwitchUnitButton from './SwitchUnitButton';
+import { isFormValid } from '../utils/form';
 
 const WeatherControls = () => {
     const { setLocation } = useWeather();
     const [query, setQuery] = useState('');
 
-    const handleSearch = (e) => {
+    const handleSearch = (e) => {        
         e.preventDefault();
+        
+        if(! isFormValid(query)) {
+            setQuery('');
+            return alert('Form is invalid. Please check your input.');
+        }
 
         setLocation(query);
         setQuery('');
