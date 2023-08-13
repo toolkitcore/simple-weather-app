@@ -4,8 +4,7 @@
   outline: none;
   list-style: none;
   box-sizing: border-box;
-  text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif; 
 }
 
 body {
