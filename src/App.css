@@ -241,6 +241,12 @@ header form button {
   animation: spin 1s linear infinite;
 }
 
+.not-found {
+  margin-top: 2rem;
+  text-align: center;
+  color: #fff;
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);

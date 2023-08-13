@@ -7,7 +7,7 @@ const WeatherDataContainer = ({ location, isCelsius }) => {
     const data = useWeather(location, isCelsius);
 
     if(data.cod == '404') {
-        return <div>City not found...</div>;
+        return <div className='not-found'>City not found...</div>;
     }
 
     const { dayOfWeek, stringDate, description, temp, minTemp, maxTemp, windSpeed, humidity } = formatWeatherData(data?.list?.[0]);
