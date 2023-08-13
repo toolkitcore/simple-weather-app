@@ -216,3 +216,37 @@ header form button {
   font-weight: 500;
   font-size: 1.25rem;
 }
+
+.loader {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  border: 2px solid transparent;
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 1s infinite;
+}
+
+.loader::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 2px solid transparent;
+  border-bottom-color: #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

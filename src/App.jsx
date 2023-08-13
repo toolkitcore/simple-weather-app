@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import WeatherControls from './components/WeatherControls';
 import WeatherDataContainer from './components/WeatherDataContainer';
 
@@ -8,13 +8,9 @@ function App() {
   const [isCelsius, setIsCelsius] = useState(true);
 
   return (
-    <div>
-        <WeatherControls
-          isCelsius={ isCelsius }
-          setIsCelsius={ setIsCelsius }
-          setLocation={ setLocation }
+      <Suspense fallback={ <div className='loader'></div> }>
         />
-        <WeatherDataContainer location={ location } isCelsius={ isCelsius } />
+      </Suspense>
     </div>
   );
 }
