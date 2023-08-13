@@ -1,10 +1,8 @@
 import { useState } from 'react';
-import { useWeather } from '../context/WeatherProvider';
 import SwitchUnitButton from './SwitchUnitButton';
 import { isFormValid } from '../utils/form';
 
-const WeatherControls = () => {
-    const { setLocation } = useWeather();
+const WeatherControls = ({ setLocation, setIsCelsius, isCelsius }) => {
     const [query, setQuery] = useState('');
 
     const handleSearch = (e) => {        
@@ -21,7 +19,10 @@ const WeatherControls = () => {
 
     return (
         <header>
-            <SwitchUnitButton />
+            <SwitchUnitButton
+                isCelsius={ isCelsius }
+                setIsCelsius={ setIsCelsius }
+            />
 
             <form onSubmit={ handleSearch }>
                 <input

@@ -1,9 +1,6 @@
 import * as Switch from '@radix-ui/react-switch';
-import { useWeather } from '../context/WeatherProvider';
 
-const SwitchUnitButton = () => {
-    const { isCelsius, setIsCelsius } = useWeather();
-
+const SwitchUnitButton = ({ isCelsius, setIsCelsius }) => {
     return (
         <div className='switch-unit-container'>
             <label htmlFor='temp-unit'>Toggle</label>
