@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import SwitchUnitButton from './SwitchUnitButton';
 import { isFormValid } from '../utils/form';
+import { AiOutlineSearch } from 'react-icons/ai';
 
 const WeatherControls = ({ setLocation, setIsCelsius, isCelsius }) => {
     const [query, setQuery] = useState('');
@@ -32,7 +33,7 @@ const WeatherControls = ({ setLocation, setIsCelsius, isCelsius }) => {
                     placeholder='Search for a place...'
                 />
                 <button type='submit' disabled={ query ? false : true }>
-                    Search
+                    <AiOutlineSearch />
                 </button>
             </form>
         </header>
