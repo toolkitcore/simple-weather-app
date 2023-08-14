@@ -4,7 +4,7 @@ import WeatherControls from './components/WeatherControls';
 import WeatherDataContainer from './components/WeatherDataContainer';
 
 function App() {
-  const [location, setLocation] = useState('');
+  const [location, setLocation] = useState('Jerusalem');
   const [isCelsius, setIsCelsius] = useState(true);
   const [recentSearches, setRecentSearches] = useState([]);
 
