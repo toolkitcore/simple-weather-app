@@ -2,8 +2,9 @@ import useWeather from '../hooks/useWeather';
 import { formatWeatherData, isSunny } from '../utils/weather';
 import { GoLocation } from 'react-icons/go';
 import { BsSun, BsCloudHaze2 } from 'react-icons/bs';
+import SearchList from './SearchList';
 
-const WeatherDataContainer = ({ location, isCelsius }) => {
+const WeatherDataContainer = ({ recentSearches, location, isCelsius }) => {
     const data = useWeather(location, isCelsius);
 
     if(data.cod == '404') {
@@ -56,6 +57,8 @@ const WeatherDataContainer = ({ location, isCelsius }) => {
                     <strong>WIND</strong>
                     <span>{ windSpeed }</span>
                 </div>
+
+                <SearchList recentSearches={ recentSearches } />
             </div>
         </div>
     );

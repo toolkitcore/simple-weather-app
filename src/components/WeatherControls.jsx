@@ -3,7 +3,7 @@ import SwitchUnitButton from './SwitchUnitButton';
 import { isFormValid } from '../utils/form';
 import { AiOutlineSearch } from 'react-icons/ai';
 
-const WeatherControls = ({ setLocation, setIsCelsius, isCelsius }) => {
+const WeatherControls = ({ setRecentSearches, setLocation, setIsCelsius, isCelsius }) => {
     const [query, setQuery] = useState('');
 
     const handleSearch = (e) => {        
@@ -13,7 +13,8 @@ const WeatherControls = ({ setLocation, setIsCelsius, isCelsius }) => {
             setQuery('');
             return alert('Form is invalid. Please check your input.');
         }
-
+        
+        setRecentSearches((prev) => [query, ...prev.slice(0, 4)]);
         setLocation(query);
         setQuery('');
     };
