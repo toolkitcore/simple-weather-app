@@ -15,7 +15,7 @@ body {
 #root {
   display: flex;
   height: 100%;
-  padding: 2rem;
+  padding: 2em;
   flex-direction: column;
 }
 
@@ -23,11 +23,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1em;
   width: max-content;
-  padding: 1rem;
+  padding: 1em;
   margin: 0 auto;
-  border-radius: 2rem;
+  border-radius: 2em;
   box-shadow: 0 1px 2px rgba(0,0,0,0.07),
               0 2px 4px rgba(0,0,0,0.07),
               0 4px 8px rgba(0,0,0,0.07);
@@ -41,14 +41,14 @@ header {
 .switch-thumb::after {
   content: 'F';
   color: #fff;
-  font-size: 0.55rem;
+  font-size: 0.55em;
 }
 
 .toggle {
   width: 42px;
   height: 25px;
   border: none;
-  border-radius: 5rem;
+  border-radius: 5em;
   background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -63,7 +63,7 @@ header {
   align-items: center;
   justify-content: center;
   background: #fff;
-  border-radius: 5rem;
+  border-radius: 5em;
   transform: translateX(2px);
   transition: transform 100ms;
   will-change: transform;
@@ -81,9 +81,9 @@ header form {
 }
 
 header form input {
-  padding: 0.7rem;
+  padding: 0.7em;
   border: 1px solid #fff;
-  border-radius: 5rem;
+  border-radius: 5em;
   background: 0;
 }
 
@@ -99,8 +99,8 @@ header form button:disabled {
 header form button {
   position: absolute;
   display: flex;
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 1.5em;
+  width: 1.5em;
   inset: 50% 5% auto auto;
   translate: 0% -50%;
   justify-content: center;
@@ -126,10 +126,10 @@ header form button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2rem;
-  width: 21rem;
-  height: 30rem;
-  border-radius: 2rem;
+  padding: 2em;
+  width: 21em;
+  height: 30em;
+  border-radius: 2em;
   background: linear-gradient(136deg, rgba(136, 235, 239, 0.6) 0%, rgba(83, 91, 230, 0.8) 100%), url('/src/assets/images/background.png');
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2),
               0 2px 4px rgba(0, 0, 0, 0.1),
@@ -139,36 +139,36 @@ header form button {
 
 .left-container .general-data {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.5em;
   flex-direction: column;
 }
 
 .general-data h2 {
   font-weight: 700;
-  font-size: 1.7rem; 
+  font-size: 1.7em; 
 }
 
 .general-data .date {
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: 500;
 }
 
 .general-data .city {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.5em;
   align-items: center;
-  font-size: 0.9rem;
+  font-size: 0.9em;
   font-weight: 600;
 }
 
 .main-forecast-data {
   display: flex;
-  gap: 1rem;
+  gap: 1em;
   flex-direction: column;
 }
 
 .main-forecast-data svg {
-  font-size: 3rem;
+  font-size: 3em;
 }
 
 .main-forecast-data .degrees::after {
@@ -180,23 +180,23 @@ header form button {
 }
 
 .main-forecast-data .degrees {
-  font-size: 3rem;
+  font-size: 3em;
 }
 
 .main-forecast-data .description {
-  font-size: 1.3rem;
+  font-size: 1.3em;
   font-weight: 700;
 }
 
 .weather-data-container .right-container {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.6em;
   margin: auto;
-  padding: 3rem;
+  padding: 3em;
   width: 19em;
-  height: 26.5rem;
-  border-radius: 1.5625rem;
+  height: 26.5em;
+  border-radius: 1.5625em;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   background: #222831;
@@ -209,12 +209,12 @@ header form button {
 
 .right-container div strong {
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.25em;
 }
 
 .right-container div span {
   font-weight: 500;
-  font-size: 1.25rem;
+  font-size: 1.25em;
 }
 
 .loader {
@@ -242,7 +242,7 @@ header form button {
 }
 
 .not-found {
-  margin-top: 2rem;
+  margin-top: 2em;
   text-align: center;
   color: #fff;
 }
@@ -251,19 +251,19 @@ header form button {
   display: flex;
   flex-direction: column;
   margin-top: auto;
-  padding: 1rem;
+  padding: 1em;
   background: rgba(0, 0, 0, 0.75);
-  border-radius: 0.5rem;
-  font-size: 0.85rem;
+  border-radius: 0.5em;
+  font-size: 0.85em;
 }
 
 .search-list .title {
   color: #d6d2ea;
-  padding: 0.2rem 0;
+  padding: 0.2em 0;
 }
 
 .search-list div:not(.title) {
-  padding: 0.2rem 0;
+  padding: 0.2em 0;
   border-top: 1px solid rgba(255, 255, 255, 0.2)
 }
 
@@ -274,5 +274,11 @@ header form button {
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 8px;
   }
 }
