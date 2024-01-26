@@ -5,10 +5,11 @@ export const isSunny = (temp, isCelsius) => {
 
 const formatDate = (timestamp, options) => {
     const date = new Date(timestamp * 1000);
-    return new Intl.DateTimeFormat('en-us', options).format(date);
+    return new Intl.DateTimeFormat('vi-vn', options).format(date);
 }
 
 export const formatWeatherData = (data) => {
+    console.log(data);
     const timestamp = data.dt;
     const dayOfWeek = formatDate(timestamp, { weekday: 'long' });
     const stringDate = formatDate(timestamp, { day: 'numeric', month: 'short', year: 'numeric' });

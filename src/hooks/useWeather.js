@@ -4,7 +4,7 @@ const BASE_URL = 'https://api.openweathermap.org';
 
 const useWeather = (location, isCelsius) => {
     const tempUnits = isCelsius ? 'metric' : 'imperial';
-    const endpoint = `/data/2.5/forecast?q=${ location }&units=${ tempUnits }&appid=${ import.meta.env.VITE_API_KEY }`;
+    const endpoint = `/data/3.0/forecast?q=${ location }&units=${ tempUnits }&appid=${ import.meta.env.VITE_API_KEY }`;
 
     const { data } = useQuery({
         queryKey: [location, isCelsius],
